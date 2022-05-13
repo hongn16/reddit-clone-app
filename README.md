@@ -1,6 +1,4 @@
-### Introduction
-
-[!live-site](https://reddit-clone-app.netlify.app/)
+### [Live Site](https://reddit-clone-app.netlify.app/)
 
 ![reddit-clone-app](https://user-images.githubusercontent.com/105206461/168332076-bc9dc57b-2f62-4f52-a340-63a3e8a2bb58.png)
 
