@@ -72,7 +72,7 @@ const redditSlice = createSlice({
   },
 });
 
-// Exports
+// Export actions.
 export const {
   setPosts,
   getPostsFailed,
@@ -86,6 +86,7 @@ export const {
   startGetComments,
 } = redditSlice.actions;
 
+// Export reducer.
 export default redditSlice.reducer;
 
 // This is a Redux Thunk that gets posts from a subreddit.
@@ -108,16 +109,19 @@ export const fetchPosts = (subreddit) => async (dispatch) => {
   }
 };
 
+// This is a Redux Thunk that gets comments from a subreddit.
 export const fetchComments = (index, permalink) => async (dispatch) => {
   try {
     dispatch(startGetComments(index));
     const comments = await getPostComments(permalink);
+    
     dispatch(getCommentsSuccess({ index, comments }));
   } catch (error) {
     dispatch(getCommentsFailed(index));
   }
 };
 
+// Export selectors.
 const selectPosts = (state) => state.reddit.posts;
 const selectSearchTerm = (state) => state.reddit.searchTerm;
 export const selectSelectedSubreddit = (state) =>

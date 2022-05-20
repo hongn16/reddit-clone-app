@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import moment from 'moment';
 import Avatar from '../Avatar/Avatar';
 
@@ -17,7 +16,7 @@ const Comment = (props) => {
           {moment.unix(comment.created_utc).fromNow()}
         </CreatedTime>
       </MetaData>
-      <ReactMarkdown source={comment.body} />
+      {comment.body}
     </CommentDiv>
   );
 };
