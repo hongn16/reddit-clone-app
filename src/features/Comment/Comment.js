@@ -50,7 +50,7 @@ const Comment = (props) => {
         </CreatedTime>
       </MetaData>
       {comment.body}
-
+      
       <VoteContainer>
           <VoteButton
             type="button"
