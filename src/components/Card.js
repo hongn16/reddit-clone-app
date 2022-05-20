@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Import Card styles.
 import { CardDiv } from './CardStyles';
 
 const Card = (props) => {

@@ -27,3 +27,28 @@ export const CreatedTime = styled.p`
     margin-left: auto;
     font-style: italic;
 `;
+
+export const VoteContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+`;
+
+export const VoteButton = styled.button`
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius);
+    &:hover {
+        background: var(--color-on-hover);
+    }
+`;
+
+export const VoteUps = styled.p`
+    font-weight: bold;
+`;

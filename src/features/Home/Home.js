@@ -12,7 +12,6 @@ import {
   fetchComments,
 } from '../../store/redditSlice';
 
-// Import Home styles.
 import { ErrorDiv, ErrorButton } from './HomeStyles'; 
 
 const Home = () => {

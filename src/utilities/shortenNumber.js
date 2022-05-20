@@ -5,11 +5,11 @@ const shortenNumber = (num, digits) => {
       const decimal = 1000 ** (i + 1);
   
       if (num <= -decimal || num >= decimal) {
-        return +(num / decimal).toFixed(digits) + units[i];
+        return (num / decimal).toFixed(digits) + units[i];
       }
     }
   
     return num;
-  };
-  
+};
+
 export default shortenNumber;

@@ -13,7 +13,6 @@ import Card from '../../components/Card';
 import Comment from '../Comment/Comment';
 import Avatar from '../Avatar/Avatar';
 
-// Import Post styles.
 import './Post.css';
 
 const Post = (props) => {
@@ -23,11 +22,11 @@ const Post = (props) => {
 
   const onHandleVote = (newValue) => {
     if (newValue === voteValue) {
-      setVoteValue(0);
+      return setVoteValue(0);
     } else if (newValue === 1) {
-      setVoteValue(1);
+      return setVoteValue(1);
     } else {
-      setVoteValue(-1);
+      return setVoteValue(-1);
     }
   };
 
@@ -85,7 +84,6 @@ const Post = (props) => {
         </div>
       );
     }
-
     return null;
   };
 
@@ -105,7 +103,7 @@ const Post = (props) => {
               {renderUpVote()}
             </button>
             <p className={`post-votes-value ${getVoteType()}`}>
-              {shortenNumber(post.ups, 1)}
+              {shortenNumber(post.ups + voteValue, 1)}
             </p>
             <button
               type="button"
@@ -145,7 +143,6 @@ const Post = (props) => {
                 {shortenNumber(post.num_comments, 1)}
               </span>
             </div>
-
             {renderComments()}
           </div>
         </div>

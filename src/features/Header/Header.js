@@ -4,7 +4,6 @@ import { HiOutlineSearch } from 'react-icons/hi';
 import { FaReddit } from 'react-icons/fa';
 import { setSearchTerm } from '../../store/redditSlice';
 
-// Import Header styles.
 import { HeaderDiv, LogoDiv, Span, SearchForm, SearchInput, SearchButton } from './HeaderStyles';
 
 const Header = () => {

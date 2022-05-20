@@ -7,7 +7,6 @@ import {
 } from 'react-icons/ti';
 import getRandomNumber from '../../utilities/getRandomNumber';
 
-// Import Post and PostLoading styles.
 import './Post.css';
 import './PostLoading.css';
 
